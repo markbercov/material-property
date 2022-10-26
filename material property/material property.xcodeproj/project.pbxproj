@@ -210,8 +210,6 @@
 			);
 			mainGroup = A828BFCD290820AC005138B7;
 			packageReferences = (
-				A8617CE32908F8090092DDD9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				A8878DDB29093ABD00217C1B /* XCRemoteSwiftPackageReference "appirater" */,
 			);
 			productRefGroup = A828BFD7290820AC005138B7 /* Products */;
 			projectDirPath = "";
@@ -474,25 +472,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A8617CE32908F8090092DDD9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		A8878DDB29093ABD00217C1B /* XCRemoteSwiftPackageReference "appirater" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/arashpayan/appirater";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = A828BFCE290820AC005138B7 /* Project object */;
 }
