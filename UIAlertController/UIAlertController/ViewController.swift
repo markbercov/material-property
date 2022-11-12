@@ -8,23 +8,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
-    @IBAction func buttonPressed(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "soska", message: " TOUCH RED TEXT", preferredStyle: .alert)
-        let action = UIAlertAction(title: "THANK U", style: .destructive)
-        
-        alert.addTextField()
-        alert.addAction(action)
-        
-        self.present(alert, animated: true)
-    }
+    let label = UILabel()
+    let buttonHow = UIButton()
+    let buttonSum = UIButton()
+    
+    var textField = UITextField()
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        self.label.frame = CGRect(x: 0, y: 200, width: 333, height: 44)
+        self.label.center.x = self.view.center.x
+        self.label.backgroundColor = .yellow
+        self.label.text = "Hi"
+        self.view.addSubview(label)
+         
     }
-
-
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setName(title: "hi there", message: "say my name")
+    }
+    
+    private func setName(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "ok", style: .destructive) {
+            (action) in
+            guard let labelText = self.label.text,
+                  let textInAlert = alertController.textFields?.first?.text
+            else { return }
+            self.label.text = labelText + " ," + textInAlert + "!"
+        }
+        
+        alertController.addTextField()
+        alertController.addAction(alertAction)
+        present(alertController, animated: true)
+        view.reloadInputViews()
+    }
+    
 }
+
 
