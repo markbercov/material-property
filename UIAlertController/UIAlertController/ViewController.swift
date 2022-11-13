@@ -27,11 +27,11 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setName(title: "hi there", message: "say my name")
+        setName(title: "hi there", message: "say my name", style: .alert)
     }
     
-    private func setName(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    private func setName(title: String, message: String, style: UIAlertController.Style) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let alertAction = UIAlertAction(title: "ok", style: .destructive) {
             (action) in
             guard let labelText = self.label.text,
@@ -47,5 +47,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-
