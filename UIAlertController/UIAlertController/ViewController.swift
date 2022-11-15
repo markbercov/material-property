@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         self.label.center.x = self.view.center.x
         self.label.backgroundColor = .yellow
         self.label.text = "Hi"
+        label.textColor = .darkGray
         self.view.addSubview(label)
          
     }
