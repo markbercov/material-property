@@ -17,8 +17,11 @@ class ViewController: UIViewController {
     @IBAction func didTapDemo(_ sender: Any) {
         let storyboard = UIStoryboard(name: "DemoModeVC", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DemoModeVC") as! DemoModeVC
-       // present(vc, animated: true)
-        navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        vc.view.backgroundColor = #colorLiteral(red: 0.6998387575, green: 0.8971835971, blue: 0.7334077954, alpha: 1)
+        
+        present(vc, animated: true)
+       // navigationController?.pushViewController(vc, animated: true)
         
     }
     @IBAction func didTapLogin(_ sender: Any) {
